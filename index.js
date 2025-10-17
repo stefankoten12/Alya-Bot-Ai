@@ -46,7 +46,7 @@ const msgRetryCounterCache = new NodeCache();
 
 assertInstalled(process.platform === 'win32' ? 'where ffmpeg' : 'command -v ffmpeg', 'FFmpeg', 0);
 //assertInstalled(process.platform === 'win32' ? 'where magick' : 'command -v convert', 'ImageMagick', 0);
-console.log(chalk.greenBright('✅  All external dependencies are satisfied'));
+console.log(chalk.greenBright('✅  ALYA BOT AI ACTIVE'));
 console.log(chalk.green.bold(`╔═════[${`${chalk.cyan(userInfoSyt())}@${chalk.cyan(os.hostname())}`}]═════`));
 print('OS', `${os.platform()} ${os.release()} ${os.arch()}`);
 print('Uptime', `${Math.floor(os.uptime() / 3600)} h ${Math.floor((os.uptime() % 3600) / 60)} m`);
@@ -163,18 +163,18 @@ async function startAlyaBot() {
 	
 	if (pairingCode && !phoneNumber && !alya.authState.creds.registered) {
 		async function getPhoneNumber() {
-			phoneNumber = global.number_bot ? global.number_bot : process.env.BOT_NUMBER || await question('Please type your WhatsApp number : ');
+			phoneNumber = global.number_bot ? global.number_bot : process.env.BOT_NUMBER || await question('BOT ALYA AKTIVE🟢👐….....\nBot Name : Alya-Bot\nOwner : +57 350 5441111\nName Owner : Stefansk\n\nMasukan Nomor Bot WhatsApp Anda🤖💤 : ');
 			phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
 			
 			if (!parsePhoneNumber('+' + phoneNumber).valid && phoneNumber.length < 6) {
-				console.log(chalk.bgBlack(chalk.redBright('Start with your Country WhatsApp code') + chalk.whiteBright(',') + chalk.greenBright(' Example : 62xxx')));
+				console.log(chalk.bgBlack(chalk.redBright('Start with your Country WhatsApp code') + chalk.whiteBright(',') + chalk.greenBright(' Contoh👾💤 : 62xxx')));
 				await getPhoneNumber()
 			}
 		}
 		(async () => {
 			await getPhoneNumber();
 			await exec('rm -rf ./stefandev/*');
-			console.log('Phone number captured. Waiting for Connection...\n' + chalk.blueBright('Estimated time: around 2 ~ 5 minutes'))
+			console.log('Nomor Bot Terdaftar Di Database🟢\n' + chalk.blueBright('Silahkan Tunggu 2-5 Menit untuk Mendapatkan Pairing Code🖍️👾'))
 		})()
 	}
 	
@@ -188,9 +188,9 @@ async function startAlyaBot() {
 		if ((connection === 'connecting' || !!qr) && pairingCode && phoneNumber && !alya.authState.creds.registered && !pairingStarted) {
 			setTimeout(async () => {
 				pairingStarted = true;
-				console.log('Requesting Pairing Code...')
+				console.log('Meminta pairing Code💤⭐.......')
 				let code = await alya.requestPairingCode(phoneNumber);
-				console.log(chalk.blue('Your Pairing Code :'), chalk.green(code), '\n', chalk.yellow('Expires in 15 second'));
+				console.log(chalk.blue('Pairing code anda💨👾 :'), chalk.green(code), '\n', chalk.yellow('Cepat Pasang Sebelum Code Nya Kadaluarsa 🕒🎊'));
 			}, 3000)
 		}
 		if (connection === 'close') {

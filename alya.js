@@ -1259,11 +1259,13 @@ if (!isCreator) return m.reply(mess.owner)
  const ls = (await execSync("ls")).toString().split("\n").filter((pe) =>
  pe != "node_modules" &&
  pe != "stefandev" &&
+ pe != "alyadev" &&
+ pe != "temp" &&
  pe != "package-lock.json" &&
  pe != "yarn.lock" &&
  pe != "");
  const exec = await execSync(`zip -r alya.zip ${ls.join(" ")}`);
- await alya.sendMessage(m.isGroup ? 6282340319193 + '@s.whatsapp.net' : from, {
+ m.reply({
  document: await fs.readFileSync('./alya.zip'),
  mimetype: "application/zip",
  fileName: "alyabotai.zip",
@@ -1405,7 +1407,7 @@ break
 			}
 			break
 			case 'sc': case 'script': {
-				await m.reply(`https://whatsapp.com/channel/0029Vb0rvI5HwXb6tu2H4H0A\n⬆️ join untuk download Script`, {
+				await m.reply(`Script Alya Bot Ai\nhttps://github.com/stefanskk/Alya-Bot-Ai\n\nSaluran Bot\nhttps://whatsapp.com/channel/0029Vb0rvI5HwXb6tu2H4H0A`, {
 					contextInfo: {
 						forwardingScore: 10,
 						isForwarded: true,
@@ -1726,6 +1728,7 @@ break
 			}
 			break
 			case 'runtime': case 'tes': case 'bot': {
+				Stefan = await getBuffer(`https://raw.githubusercontent.com/NdikzDatabase/Database/main/Database/1760688333183-uc8oqt.mpeg`)
 				switch(args[0]) {
 					case 'mode': case 'public': case 'self':
 					if (!isCreator) return m.reply(mess.owner)
@@ -1771,7 +1774,7 @@ break
 					default:
 					if (args[0] || args[1]) m.reply(`*Please Sellect Settings :*\n- Mode : *${prefix + command} mode self/public*\n- Anti Call : *${prefix + command} anticall on/off*\n- Auto Bio : *${prefix + command} autobio on/off*\n- Auto Read : *${prefix + command} autoread on/off*\n- Auto Typing : *${prefix + command} autotyping on/off*\n- Read Sw : *${prefix + command} readsw on/off*\n- Multi Prefix : *${prefix + command} multiprefix on/off*`)
 				}
-				if (!args[0] && !args[1]) return m.reply(`*Bot Telah Online Selama*\n*${runtime(process.uptime())}*`)
+				if (!args[0] && !args[1]) return await alya.sendMessage(m.chat, { audio: Stefan, mimetype: 'audio/mp4', ptt: false }, { quoted: m })     
 			}
 			break
 			case 'ping': case 'botstatus': case 'statusbot': {
@@ -4344,6 +4347,9 @@ alya.sendMessage(m.chat, {
     }
   }
 }, { quoted: m });
+Stefansk = await getBuffer(`https://raw.githubusercontent.com/NdikzDatabase/Database/main/Database/1760687529826-4x75eb.mp4`)
+await alya.sendMessage(m.chat, { audio: Stefansk, mimetype: 'audio/mp4', ptt: false }, { quoted: m })     
+break 
 			}
 			break
 			case 'allmenu': {
@@ -4623,7 +4629,7 @@ alya.sendMessage(m.chat, {
 ║ ${setv} ${prefix}𝚐𝚎𝚝𝚜𝚎𝚜𝚜𝚒𝚘𝚗
 ║ ${setv} ${prefix}𝚍𝚎𝚕𝚜𝚎𝚜𝚜𝚒𝚘𝚗
 ║ ${setv} ${prefix}𝚍𝚎𝚕𝚜𝚊𝚖𝚙𝚊𝚑
-║ ${setv} ${prefix}𝚞𝚙𝚜𝚠
+║ ${setv} ${prefix}𝚞??𝚜𝚠
 ║ ${setv} ${prefix}𝚋𝚊𝚌𝚔𝚞𝚙
 ║ ${setv} ${prefix}$
 ║ ${setv} ${prefix}>
@@ -5400,7 +5406,7 @@ m.reply('*SUCCESSFULLY DELETE THE USER*')
 ║ ${setv} ${prefix}𝚋𝚊𝚗
 ║ ${setv} ${prefix}𝚞𝚗𝚋𝚊𝚗
 ║ ${setv} ${prefix}𝚖𝚞𝚝𝚎
-║ ${setv} ${prefix}𝚞𝚗𝚖𝚞𝚝𝚎
+║ ${setv} ${prefix}𝚞𝚗??𝚞𝚝𝚎
 ║ ${setv} ${prefix}𝚌𝚛𝚎𝚊𝚝𝚎𝚐𝚌
 ║ ${setv} ${prefix}𝚌𝚕𝚎𝚊𝚛𝚌𝚑𝚊𝚝
 ║ ${setv} ${prefix}𝚊𝚍𝚍𝚙𝚛𝚎𝚖
